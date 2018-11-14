@@ -1,4 +1,4 @@
-package com.jiangyixuan.user.web;
+package com.jiangyixuan.user.web.controller;
 
 import com.jiangyixuan.user.domain.User;
 import com.jiangyixuan.user.service.UserService;
@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * 用户服务REST API
+ * {@link UserService 用户服务} 提供方 REST API {@link RestController}
  *
  * @author jiangyixuan
  * @date 2018-11-13
  */
 @RestController
-public class UserController {
+public class UserServiceProvideRestApiController {
 
     @Autowired
     private UserService userService;
@@ -40,5 +40,6 @@ public class UserController {
     public List<User> listUser() {
         return userService.findAll();
     }
+
 
 }

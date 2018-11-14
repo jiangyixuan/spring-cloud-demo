@@ -1,11 +1,9 @@
 server:
-  port: 9090 #\u670D\u52A1\u6CE8\u518C\u4E2D\u5FC3\u7AEF\u53E3\u53F7
+  port: 9090 #服务注册中心端口号
 
 eureka:
-  instance:
-    hostname: localhost #\u670D\u52A1\u6CE8\u518C\u4E2D\u5FC3\u5B9E\u4F8B\u7684\u4E3B\u673A\u540D
   client:
-    registerWithEureka: false #\u662F\u5426\u5411\u670D\u52A1\u6CE8\u518C\u4E2D\u5FC3\u6CE8\u518C\u81EA\u5DF1
-    fetchRegistry: false #\u662F\u5426\u68C0\u7D22\u670D\u52A1
+    registerWithEureka: false #是否向服务注册中心注册自己
+    fetchRegistry: false #是否检索服务
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://localhost:9090/eureka/
